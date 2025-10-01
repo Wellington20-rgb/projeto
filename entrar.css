@@ -1,0 +1,802 @@
+body{
+    margin: auto;
+    background-color: #FEF8DA;
+}
+/* Topo do Site +*/
+.top{
+    background-color: rgba(0, 0, 0, 0.212);
+    width: 100%;
+    height: auto;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+}
+.img1{
+    width: 5%;
+    height: 5%;
+}
+/* Topo do Site -*/
+/*---------------------------------------------------------------------------------*/
+/* Tela Inicial +*/
+.image-container {
+  display: grid;
+  width: 100%;
+}
+.image-container img {
+  grid-area: 1 / 1 / 2 / 2; /* todas as imagens ocupam a mesma grade */
+  width: 100%;
+  height: 100%;
+}
+.black {
+  /* opcional: ajuste para mudar a opacidade */
+  opacity: 0.9;
+  /* você também pode adicionar bordas ou mudar a posição */
+}
+.title{
+  position: absolute;
+  top: 20%;
+  left: 10%;      
+  color: white;
+  font-size: 615%;
+}
+.T2{
+  position: absolute;
+  top: 73%;
+
+}
+.T3{
+  position: absolute;
+  top: 150%;
+  color: #46703a;
+}
+/* Tela Inicial -*/
+/*---------------------------------------------------------------------------------*/
+/* Botão Saiba Mais +*/
+.login-button{
+  background-color: white; /* Bootstrap blue */
+  color: #46703a;
+  border: none;
+  padding: 12px 24px;
+  font-size: 2.1rem;
+  font-family: "Times New Roman";
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  height: 10vh;
+  overflow: hidden; /* Prescisa para fazer o overlay */
+  z-index: 0;
+}
+ 
+/* Sobreposição deslizante */
+.login-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #89D98C; /* A cor de fundo do background do hover */
+  border-radius: 15px;
+  transition: height 0.3s ease;
+  z-index: -1; /* Atrás do texto do botão */
+}
+ 
+.login-button:hover::before {
+  height: 100%;
+}
+ 
+.login-button:hover {
+  color: white; /* Mudar a cor do texto ao passar o mouse para contraste */
+  background-color: transparent; /* Oculte o fundo original para mostrar a sobreposição */
+}
+ 
+.login-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
+}
+/* Botão Saiba mais- */
+/*---------------------------------------------------------------------------------*/
+/* Menu +*/
+#box {
+  width: 6%;
+  height: 22vh;
+  background: #46703a;
+  border-radius: 7px;
+  transition: transform 1s ease;
+  right: -13%;
+  position: fixed;
+  top: 0;
+}
+.move {
+  transform: translateX(-210%);
+}
+/* Ícone do menu */
+.menu-icon {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: fixed;
+    top: 3.5%;
+    right: 0.4%;
+}
+.bar{
+    height: 4px;
+    width: 100%;
+    background: #528b54;
+    border-radius: 2px;
+    transition: 1s;
+}
+/* Animação do ícone quando abre */
+.menu-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 6px);
+    width: 25px;
+    height: 4px;
+}
+.menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(9px,-7px);
+    width: 25px;
+    height: 4px;
+}
+/* Personalização dos itens do menu */
+.menu ul {
+    list-style: none;
+    padding: 10%;
+}
+.menu ul li a:hover{
+  color:black;
+}
+.menu ul li {
+    margin: 20px 0;
+} 
+.menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* Menu - */
+/*---------------------------------------------------------------------------------*/
+/* Corpo do Site +*/
+.corpo{
+  background-color: #FEF8DA;
+  width: 100%;
+  height: auto;
+}
+/* Corpo do Site -*/
+/*---------------------------------------------------------------------------------*/
+/*Informações do Corpo +*/
+.corpoT{
+  background-color: #FEF8DA;
+}
+.titulo1{
+  text-align: left;
+  width: 38%;
+  margin-left: 33%;
+  font: 2em sans-serif;
+  font-size: 300%;
+  margin-top: 2%;
+  border: 2px;
+  border-radius: 10px;
+}
+.texto1{
+  text-align: left;
+  width: 60%;
+  margin-left: 20%;
+  font: 2em sans-serif;
+  font-size: 200%;
+  margin-top: 2%;
+  border-radius: 10px;
+  background-color: #46703a;
+  padding: 2%;
+  color: white;
+}
+.titulo2{
+  text-align: left;
+  width: 25%;
+  margin-left: 38%;
+  font: 2em sans-serif;
+  font-size: 300%;
+  margin-top: 2%;
+  border: 2px;
+  border-radius: 10px;
+}
+.texto2{
+  text-align: left;
+  width: 60%;
+  margin-left: 20%;
+  font: 2em sans-serif;
+  margin-top: 2%;
+  font-size: 200%;
+  border-radius: 10px;
+  background-color: #46703a;
+  padding: 2%;
+  color: white;
+}
+.titulo3{
+  text-align: left;
+  width: 25%;
+  margin-left: 38%;
+  font: 2em sans-serif;
+  font-size: 300%;
+  margin-top: 2%;
+  border: 2px;
+  border-radius: 10px;
+}
+/*---------------------------------------------------------------------------------*/
+/* Cartas de Informações +*/
+.card {
+  perspective: 1000px;
+    width: 300px;
+    height: 30vh;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.card-front {
+  background: linear-gradient(135deg, #46703a, #30d302);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.card-back {
+  background: linear-gradient(135deg, #89D98C, #c6ffc8);
+  color: black;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+.card-image {
+  width: 90%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.card-text {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.cards-grid {
+    display: flex;
+    gap: 96px;
+    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.card1{
+  perspective: 0px;
+  width: 0%;
+  height: 0vh;
+}
+.max-w-6xl{
+  max-width: 100rem;
+}
+/* Cartas de informações -*/
+/*---------------------------------------------------------------------------------*/
+/* Mapa Mundial+*/
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.dot1{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 46%; 
+  top: 16%;
+}
+.dot2{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 44%; 
+  top: 20%;
+}
+.dot3{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 49%; 
+  top: 13%;
+}
+.dot4{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 10%; 
+  top: 19%;
+}
+.dot5{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 70%; 
+  top: 55%;
+}
+.dot6{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 21%; 
+  top: 72%;
+}
+.dot:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+}
+.modal-content {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#modal.hidden .modal-content {
+  opacity: 0;
+  transform: scale(0.9);
+}
+#modal:not(.hidden) .modal-content {
+  opacity: 1;
+  transform: scale(1);
+}
+/* Mapa Mundial-*/
+/*---------------------------------------------------------------------------------*/
+/* Rodapé+*/
+.rodape{
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+  margin-top: 2%;
+  text-align: center;
+}
+.logoB{
+  width: 5%;
+  height: 100%;
+  float: left;
+  margin-right: -15%;
+}
+.rodapeT{
+  color: #46703a;
+  text-align: center;
+  font-size: 170%;
+}
+/* Rodapé-*/
+/*---------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* Para tablets e dispositivos menores */
+@media (max-width: 768px){
+  body{
+    margin: auto;
+/* Imagem de Fundo+*/
+}
+.image-container {
+  display: grid;
+  width: 100%;
+}
+.image-container img {
+  grid-area: 1 / 1 / 2 / 2; /* todas as imagens ocupam a mesma grade */
+  width: 100%;
+  height: 860px;
+}
+.black {
+  /* opcional: ajuste para mudar a opacidade */
+  opacity: 0.9;
+  /* você também pode adicionar bordas ou mudar a posição */
+}
+/* Imagem de Fundo-*/
+/*---------------------------------------------------------------------------------*/
+/* Titulo+*/
+.title{
+  position: absolute;
+  top: 25%;
+  left: 5%;      
+  color: white;
+  font-size: 190%;
+}
+.T2{
+  position: absolute;
+  top: 70%;
+}
+.T3{
+  position: absolute;
+  top: 145%;
+}
+/* Titulo-*/
+/*---------------------------------------------------------------------------------*/
+/* Botão de Login+*/
+.login-button {
+  background-color: white; /* Bootstrap blue */
+  color: #46703a;
+  border: none;
+  padding: 12px 24px;
+  font-size: 2.1rem;
+  font-family: "Times New Roman";
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 340px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  height: 10vh;
+  overflow: hidden; /* Needed for the sliding overlay */
+  z-index: 0;
+}
+ 
+/* Sliding overlay */
+.login-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #89D98C; /* The hover background color */
+  border-radius: 15px;
+  transition: height 0.3s ease;
+  z-index: -1; /* Behind the button text */
+}
+ 
+.login-button:hover::before {
+  height: 100%;
+}
+ 
+.login-button:hover {
+  color: white; /* Change text color on hover for contrast */
+  background-color: transparent; /* Hide original background to show overlay */
+}
+ 
+.login-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
+}
+/* Botão de Login -*/
+/*---------------------------------------------------------------------------------*/
+/* Topo+*/
+.img1{
+  width: 20%;
+}
+/* Topo-*/
+/*---------------------------------------------------------------------------------*/
+/* Menu+*/
+#box {
+  width: 19%;
+  height: 29vh;
+  background: #46703a;
+  border-radius: 7px;
+  transition: transform 1s ease;
+  right: -25%;
+  position: fixed;
+  top: 0;
+}
+.menu ul {
+    list-style: none;
+    padding: 9%;
+    margin-top: 28%;
+}
+.move {
+  transform: translateX(-100%);
+}
+/* Menu-*/
+/*---------------------------------------------------------------------------------*/
+/* Mapa+*/
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.dot1{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 46%; 
+  top: 16%;
+}
+.dot2{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 44%; 
+  top: 20%;
+}
+.dot3{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 49%; 
+  top: 13%;
+}
+.dot4{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 10%; 
+  top: 19%;
+}
+.dot5{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 70%; 
+  top: 55%;
+}
+.dot6{
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  left: 21%; 
+  top: 72%;
+}
+/* Mapa-*/
+/*---------------------------------------------------------------------------------*/
+/* Informações do corpo+*/
+.corpoT{
+  background-color: #FEF8DA;
+}
+.titulo1{
+  text-align: left;
+  width: 90%;
+  margin-left: 5%;
+  font: 2em sans-serif;
+  font-size: 190%;
+  margin-top: 2%;
+  border: 2px;
+  border-radius: 10px;
+}
+.texto1{
+  text-align: left;
+  width: 90%;
+  margin-left: 5%;
+  font: 2em sans-serif;
+  font-size: 150%;
+  margin-top: 2%;
+  border-radius: 10px;
+  background-color: #46703a;
+}
+.titulo2{
+  text-align: left;
+  width: 70%;
+  margin-left: 15%;
+  font: 2em sans-serif;
+  font-size: 190%;
+  margin-top: 2%;
+  border: 2px;
+  border-radius: 10px;
+}
+.texto2{
+  text-align: left;
+  width: 90%;
+  background-color: white;
+  margin-left: 5%;
+  font: 2em sans-serif;
+  margin-top: 2%;
+  font-size: 150%;
+  border-radius: 10px;
+  background-color: #46703a;
+}
+.titulo3{
+  text-align: left;
+  width: 25%;
+  margin-left: 38%;
+  font: 2em sans-serif;
+  font-size: 200%;
+  margin-top: 2%;
+  border: 2px;
+  border-radius: 10px;
+}
+/* Informações do corpo-*/
+/*---------------------------------------------------------------------------------*/
+/* Rodapé+*/
+.rodape{
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+  margin-top: 2%;
+  text-align: center;
+}
+.logoB{
+  width: 15%;
+  height: 100%;
+  float: left;
+}
+.rodapeT{
+  color: #46703a;
+  text-align: center;
+  font-size: 110%;
+}
+/* Rodapé-*/
+/*---------------------------------------------------------------------------------*/
+}
